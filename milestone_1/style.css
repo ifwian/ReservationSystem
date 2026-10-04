@@ -1,0 +1,116 @@
+/* FRAME Gaming Café - style.css (Milestone 1)
+   BASIC styling only: colors, text, spacing, borders.
+   No layout system, no responsive rules, no animation yet (Milestone 2). */
+
+/* ----- Colors and fonts, saved as variables so we can change them in one place ----- */
+:root {
+  --bg: #16181d;       /* page background: soft dark, easy on the eyes */
+  --text: #cbd0d8;     /* normal text */
+  --muted: #8e95a1;    /* secondary text */
+  --strong: #e1e5eb;   /* headings */
+  --line: #3a3f48;     /* thin borders */
+  --font: Arial, Helvetica, sans-serif;
+  --mono: "Courier New", monospace;
+}
+
+/* ----- Page basics ----- */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: var(--strong);
+  margin: 0 0 12px;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 28px; }
+
+a { color: var(--text); }
+
+/* ----- Header ----- */
+header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: var(--strong);
+  margin-right: 24px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+nav a:hover {
+  color: var(--strong);
+}
+
+/* ----- Sections ----- */
+section {
+  padding: 40px 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* ----- Small helpers ----- */
+.label,
+.mono {
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.label { color: var(--muted); }
+.mono  { color: var(--strong); }
+
+ul {
+  padding-left: 20px;
+}
+
+/* ----- Buttons ----- */
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: var(--text);
+  color: var(--bg);
+  border: 1px solid var(--text);
+  font-family: var(--mono);
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.button:disabled {
+  background: transparent;
+  color: var(--muted);
+  border-color: var(--line);
+  cursor: not-allowed;
+}
+
+/* ----- Footer ----- */
+footer {
+  padding: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
